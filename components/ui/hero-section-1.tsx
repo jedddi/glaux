@@ -54,9 +54,9 @@ function ElegantShape({
             "bg-gradient-to-r to-transparent",
             gradient,
             "backdrop-blur-[2px] border-2 border-primary/[0.15]",
-            "shadow-[0_8px_32px_0_rgba(176,47,0,0.1)]",
+            "shadow-[0_8px_32px_0_rgba(255,79,0,0.1)]",
             "after:absolute after:inset-0 after:rounded-[9999px]",
-            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(176,47,0,0.2),transparent_70%)]"
+            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,79,0,0.2),transparent_70%)]"
           )}
         />
       </motion.div>
@@ -241,7 +241,7 @@ export function HeroSection() {
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 opacity-10 pointer-events-none"
             style={{
-              backgroundImage: "radial-gradient(#b02f00 0.5px, transparent 0.5px)",
+              backgroundImage: "radial-gradient(#ff4f00 0.5px, transparent 0.5px)",
               backgroundSize: "24px 24px",
             }}
           />
@@ -300,19 +300,19 @@ export function HeroSection() {
                 variants={fadeUpVariants}
                 initial="hidden"
                 animate="visible"
-                className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/15 mb-8 mx-auto"
+                className="inline-flex items-center gap-3 px-4 py-1.5 rounded-[20px] bg-light-sand border border-sand mb-8 mx-auto"
               >
-                <span className="font-label-caps text-primary tracking-[0.2em]">
+                <span className="font-label-caps text-zap-orange tracking-[0.2em]">
                   SYSTEM READY
                 </span>
-                <span className="block h-4 w-px bg-primary/30" />
-                <div className="bg-primary/10 size-6 overflow-hidden rounded-full">
+                <span className="block h-4 w-px bg-sand" />
+                <div className="bg-zap-orange/10 size-6 overflow-hidden rounded-full">
                   <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out hover:translate-x-0">
                     <span className="flex size-6 items-center justify-center">
-                      <ArrowRight className="size-3 text-primary" />
+                      <ArrowRight className="size-3 text-zap-orange" />
                     </span>
                     <span className="flex size-6 items-center justify-center">
-                      <ArrowRight className="size-3 text-primary" />
+                      <ArrowRight className="size-3 text-zap-orange" />
                     </span>
                   </div>
                 </div>
@@ -324,11 +324,11 @@ export function HeroSection() {
                 variants={fadeUpVariants}
                 initial="hidden"
                 animate="visible"
-                className="font-display-xl text-on-surface mb-6 max-w-4xl mx-auto md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5.25rem]"
+                className="font-display-xl text-zap-black mb-6 max-w-4xl mx-auto text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[5rem]"
               >
                 <span>Inspect CNN models.</span>{" "}
                 <span>Test them on data.</span>{" "}
-                <span className="text-primary">Understand failures.</span>
+                <span className="text-zap-orange">Understand failures.</span>
               </motion.h1>
 
               {/* Subheadline */}
@@ -337,7 +337,7 @@ export function HeroSection() {
                 variants={fadeUpVariants}
                 initial="hidden"
                 animate="visible"
-                className="font-body-base text-secondary max-w-2xl mx-auto mb-10 text-lg"
+                className="font-body-lg text-dark-charcoal max-w-2xl mx-auto mb-10"
               >
                 Glaux provides clinical precision for machine learning engineers.
                 Deploy with absolute confidence by isolating edge cases and
@@ -352,12 +352,12 @@ export function HeroSection() {
                 animate="visible"
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-20 relative z-20"
               >
-                <div className="bg-primary/10 rounded-[14px] border border-primary/20 p-0.5">
-                  <button className="bg-primary text-white font-['Manrope'] px-8 py-4 rounded-xl text-md font-bold shadow-lg hover:shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+                <div className="bg-zap-orange/10 rounded-lg border border-zap-orange/20 p-0.5">
+                  <button className="bg-zap-orange text-cream font-button px-8 py-3.5 rounded-md hover:bg-zap-orange/90 transition-all active:scale-[0.98]">
                     Get Started Free
                   </button>
                 </div>
-                <button className="bg-white border border-outline-variant text-on-surface font-['Manrope'] px-8 py-4 rounded-xl text-md font-bold hover:bg-surface-container transition-all active:scale-95">
+                <button className="bg-light-sand text-dark-charcoal border border-sand font-button px-8 py-3.5 rounded-lg hover:bg-sand hover:text-zap-black transition-all active:scale-[0.98]">
                   View Documentation
                 </button>
               </motion.div>
@@ -368,26 +368,26 @@ export function HeroSection() {
                 variants={fadeUpVariants}
                 initial="hidden"
                 animate="visible"
-                className="relative w-full max-w-6xl mx-auto mt-4 mb-[-80px] md:mb-[-120px] lg:mb-[-160px]"
+                className="relative w-full max-w-6xl mx-auto mt-4 mb-[-40px] md:mb-[-60px] lg:mb-[-80px]"
               >
                 {/* Glow halo behind mockup */}
-                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[120%] h-[150%] bg-[radial-gradient(circle_at_center,_rgba(176,47,0,0.12)_0%,_transparent_70%)] pointer-events-none rounded-full blur-[100px] -z-10" />
+                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[120%] h-[150%] bg-[radial-gradient(circle_at_center,_rgba(255,79,0,0.12)_0%,_transparent_70%)] pointer-events-none rounded-full blur-[100px] -z-10" />
 
-                <div className="browser-mockup fade-bottom relative bg-white rounded-t-2xl border-x border-t border-slate-200 overflow-hidden shadow-2xl">
+                <div className="browser-mockup fade-bottom relative bg-cream rounded-t-lg border-x border-t border-sand overflow-hidden">
                   {/* Browser chrome */}
-                  <div className="h-10 bg-slate-100/80 backdrop-blur border-b border-slate-200 flex items-center px-4 gap-2">
+                  <div className="h-10 bg-light-sand/80 backdrop-blur border-b border-sand flex items-center px-4 gap-2">
                     <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-slate-300" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-sand" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-sand" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-sand" />
                     </div>
-                    <div className="mx-auto bg-white/60 rounded py-0.5 px-12 text-[10px] text-slate-400 font-mono">
+                    <div className="mx-auto bg-cream/60 rounded-[4px] py-0.5 px-12 text-[10px] text-warm-gray font-mono-data">
                       glaux.ai/dashboard
                     </div>
                   </div>
 
                   {/* Dashboard screenshot */}
-                  <div className="w-full bg-background overflow-hidden max-h-[380px]">
+                  <div className="w-full bg-cream overflow-hidden max-h-[520px] md:max-h-[600px] lg:max-h-[680px]">
                     <img
                       alt="Glaux Dashboard Preview"
                       className="w-full object-top object-cover"
@@ -404,22 +404,22 @@ export function HeroSection() {
         </div>
 
         {/* ── Interrogation modes ─────── */}
-        <section className="bg-background pb-8 pt-16 md:pb-12 md:pt-24">
+        <section className="bg-background py-10 md:py-14">
           <div className="mx-auto max-w-6xl px-6">
-            <div className="flex flex-col sm:flex-row items-start justify-center gap-12 sm:gap-0 sm:divide-x sm:divide-outline-variant/20">
+            <div className="flex flex-col sm:flex-row items-start justify-center gap-12 sm:gap-0 sm:divide-x sm:divide-sand/30">
               {[
                 {
-                  icon: <Layers className="size-32" strokeWidth={1} />,
+                  icon: <Layers className="size-16" strokeWidth={1.2} />,
                   title: "The Structural Eye",
                   description: "Analyze layer hierarchy and tensor shapes.",
                 },
                 {
-                  icon: <Target className="size-32" strokeWidth={1} />,
+                  icon: <Target className="size-16" strokeWidth={1.2} />,
                   title: "The Performance Lens",
                   description: "Evaluate accuracy, precision, and recall on custom datasets.",
                 },
                 {
-                  icon: <ScanSearch className="size-32" strokeWidth={1} />,
+                  icon: <ScanSearch className="size-16" strokeWidth={1.2} />,
                   title: "The Failure Explorer",
                   description: "Isolate misclassified samples to improve model robustness.",
                 },
@@ -429,16 +429,16 @@ export function HeroSection() {
                   className="group flex flex-col items-center cursor-default flex-1 px-8 lg:px-12"
                 >
                   {/* Icon — always visible */}
-                  <div className="text-on-surface/20 transition-all duration-500 group-hover:text-primary group-hover:scale-110">
+                  <div className="text-dark-charcoal/20 transition-all duration-500 group-hover:text-zap-orange group-hover:scale-110">
                     {mode.icon}
                   </div>
 
                   {/* Text — fades + rises on hover */}
                   <div className="mt-8 flex flex-col items-center text-center pointer-events-none min-h-[100px]">
-                    <p className="font-['Manrope'] font-bold text-lg text-on-surface opacity-0 translate-y-4 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0">
+                    <p className="font-headline-md text-lg text-zap-black opacity-0 translate-y-4 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0">
                       {mode.title}
                     </p>
-                    <p className="font-['Inter'] text-sm text-secondary leading-relaxed mt-3 max-w-[240px] opacity-0 translate-y-4 transition-all duration-500 ease-out delay-100 group-hover:opacity-100 group-hover:translate-y-0">
+                    <p className="font-body-sm text-dark-charcoal/70 leading-relaxed mt-3 max-w-[240px] opacity-0 translate-y-4 transition-all duration-500 ease-out delay-100 group-hover:opacity-100 group-hover:translate-y-0">
                       {mode.description}
                     </p>
                   </div>
@@ -460,7 +460,7 @@ function GlauxLogo({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "text-xl font-extrabold tracking-tighter text-primary font-['Manrope']",
+        "text-xl font-extrabold tracking-tighter text-zap-orange font-['Degular_Display']",
         className
       )}
     >

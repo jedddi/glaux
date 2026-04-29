@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope, Space_Grotesk, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { QueryProvider } from "@/lib/query-provider";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -36,9 +37,11 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", "light", inter.variable, manrope.variable, spaceGrotesk.variable, "font-sans", geist.variable)}
     >
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Degular+Display:wght@500;600&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body-base text-on-background selection:bg-primary-container selection:text-white min-h-full flex flex-col">{children}</body>
+      <body className="font-body-base text-on-background selection:bg-primary-container selection:text-white min-h-full flex flex-col">
+        <QueryProvider>{children}</QueryProvider>
+      </body>
     </html>
   );
 }

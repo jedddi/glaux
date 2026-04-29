@@ -1,4 +1,7 @@
+"use client";
+
 import { HeroSection } from "@/components/ui/hero-section-1";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Rocket } from "lucide-react";
 
 export default function Home() {
@@ -7,152 +10,171 @@ export default function Home() {
       <main className="w-full">
         <HeroSection />
 
-        <section className="px-6 pt-8 pb-24 max-w-7xl mx-auto">
-          <div className="mb-12">
-            <h2 className="font-headline-lg text-on-surface">Analysis Suite</h2>
-            <p className="text-secondary font-body-base mt-2">Professional tools for deep model interrogation.</p>
-          </div>
+        <section className="px-6 pt-4 pb-14 md:pb-16 max-w-[1200px] mx-auto">
+          <ScrollReveal delay={0.1}>
+            <div className="mb-8 md:mb-10">
+              <span className="font-label-caps text-warm-gray tracking-[0.05em] mb-3 block">
+                01 / Analysis
+              </span>
+              <h2 className="font-heading text-zap-black mb-2">
+                Analysis Suite
+              </h2>
+              <p className="font-body-lg text-dark-charcoal">
+                Professional tools for deep model interrogation.
+              </p>
+            </div>
+          </ScrollReveal>
+
           <div className="bento-grid">
-            <div className="col-span-12 lg:col-span-8 bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-all group">
-              <div className="flex justify-between items-start mb-12">
-                <div>
-                  <span className="material-symbols-outlined text-primary mb-4 p-3 bg-primary-fixed rounded-lg" data-icon="error_outline">error_outline</span>
-                  <h3 className="font-headline-md text-on-surface">Failure Explorer</h3>
-                  <p className="text-secondary font-body-base mt-2">Identify clusters of misclassifications across high-dimensional feature spaces.</p>
+            <ScrollReveal delay={0.15} className="col-span-12 lg:col-span-8">
+              <div className="bg-cream border border-sand rounded-[5px] p-8 h-full hover:border-warm-gray transition-colors group">
+                <div className="flex justify-between items-start mb-12">
+                  <div>
+                    <span className="material-symbols-outlined text-zap-orange mb-4 p-3 bg-light-sand rounded-[5px]" data-icon="error_outline">error_outline</span>
+                    <h3 className="font-headline-md text-zap-black">Failure Explorer</h3>
+                    <p className="text-dark-charcoal/70 font-body-base mt-2">Identify clusters of misclassifications across high-dimensional feature spaces.</p>
+                  </div>
+                  <span className="material-symbols-outlined text-sand group-hover:text-zap-orange transition-colors" data-icon="open_in_new">open_in_new</span>
                 </div>
-                <span className="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
-              </div>
-              <div className="w-full h-64 bg-slate-50 rounded-lg overflow-hidden border border-slate-100 relative">
-                <img className="w-full h-full object-cover opacity-80" alt="Technical data visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXucOlFPH_gYNNkxoaGV52owNBE4Eg4fa6AeajosxcJVri-dvKp4t95ysH3jDU1gvIO3eDmEr7fsXwnOhdiX3HLnI5WrfWuG70DXq_bwNaGprMl67SsoL8JedL2BgA9U8Q6HTgbIft3ksxuh7vvsXahAlu079NT1750WQMg-V8NhhW_MFGbtYzeiYB_90iCE8L5qiRWXHC5WhVSqEWjM4l8KmRWbTa_OW4t2bA_U9pDlmDxJ_dH4nd3N17eewtJ7jCIFXLfST2XS_m"/>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-white/90 backdrop-blur p-4 rounded-lg border border-primary/20 flex gap-4 items-center">
-                    <div className="w-2 h-2 rounded-full bg-error animate-pulse"></div>
-                    <span className="font-mono-data text-xs text-on-surface">High entropy cluster detected at Layer 14</span>
+                <div className="w-full h-64 bg-light-sand rounded-[5px] overflow-hidden border border-sand relative">
+                  <img className="w-full h-full object-cover opacity-80" alt="Technical data visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXucOlFPH_gYNNkxoaGV52owNBE4Eg4fa6AeajosxcJVri-dvKp4t95ysH3jDU1gvIO3eDmEr7fsXwnOhdiX3HLnI5WrfWuG70DXq_bwNaGprMl67SsoL8JedL2BgA9U8Q6HTgbIft3ksxuh7vvsXahAlu079NT1750WQMg-V8NhhW_MFGbtYzeiYB_90iCE8L5qiRWXHC5WhVSqEWjM4l8KmRWbTa_OW4t2bA_U9pDlmDxJ_dH4nd3N17eewtJ7jCIFXLfST2XS_m" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-cream/90 backdrop-blur p-4 rounded-[5px] border border-sand flex gap-4 items-center">
+                      <div className="w-2 h-2 rounded-full bg-zap-orange animate-pulse"></div>
+                      <span className="font-mono-data text-xs text-zap-black">High entropy cluster detected at Layer 14</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
-              <span className="material-symbols-outlined text-primary mb-4 p-3 bg-primary-fixed rounded-lg" data-icon="account_tree">account_tree</span>
-              <h3 className="font-headline-md text-on-surface">Model Summary</h3>
-              <p className="text-secondary font-body-base mt-2 mb-8">Architectural breakdown and parameter efficiency metrics.</p>
-              <div className="space-y-3">
-                <div className="flex justify-between py-2 border-b border-slate-50">
-                  <span className="text-body-sm text-secondary">Total Parameters</span>
-                  <span className="font-mono-data text-body-sm font-bold">24.5M</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-slate-50">
-                  <span className="text-body-sm text-secondary">Architecture</span>
-                  <span className="font-mono-data text-body-sm font-bold">ResNet-50</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="text-body-sm text-secondary">Top-1 Accuracy</span>
-                  <span className="font-mono-data text-body-sm font-bold text-primary">94.2%</span>
+            <ScrollReveal delay={0.25} className="col-span-12 md:col-span-6 lg:col-span-4">
+              <div className="bg-cream border border-sand rounded-[5px] p-8 h-full hover:border-warm-gray transition-colors">
+                <span className="material-symbols-outlined text-zap-orange mb-4 p-3 bg-light-sand rounded-[5px]" data-icon="account_tree">account_tree</span>
+                <h3 className="font-headline-md text-zap-black">Model Summary</h3>
+                <p className="text-dark-charcoal/70 font-body-base mt-2 mb-8">Architectural breakdown and parameter efficiency metrics.</p>
+                <div className="space-y-3">
+                  <div className="flex justify-between py-2 border-b border-sand/50">
+                    <span className="font-body-sm text-dark-charcoal/60">Total Parameters</span>
+                    <span className="font-mono-data font-semibold text-zap-black">24.5M</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-sand/50">
+                    <span className="font-body-sm text-dark-charcoal/60">Architecture</span>
+                    <span className="font-mono-data font-semibold text-zap-black">ResNet-50</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="font-body-sm text-dark-charcoal/60">Top-1 Accuracy</span>
+                    <span className="font-mono-data font-semibold text-zap-orange">94.2%</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
-              <span className="material-symbols-outlined text-primary mb-4 p-3 bg-primary-fixed rounded-lg" data-icon="grid_view">grid_view</span>
-              <h3 className="font-headline-md text-on-surface">Confusion Matrix</h3>
-              <p className="text-secondary font-body-base mt-2 mb-6">Interactive heatmaps to visualize class-wise performance and overlap.</p>
-              <div className="grid grid-cols-4 gap-1 opacity-60">
-                <div className="aspect-square bg-primary/80 rounded-lg"></div>
-                <div className="aspect-square bg-primary/20 rounded-lg"></div>
-                <div className="aspect-square bg-primary/10 rounded-lg"></div>
-                <div className="aspect-square bg-primary/5 rounded-lg"></div>
-                <div className="aspect-square bg-primary/10 rounded-lg"></div>
-                <div className="aspect-square bg-primary/90 rounded-lg"></div>
-                <div className="aspect-square bg-primary/5 rounded-lg"></div>
-                <div className="aspect-square bg-primary/20 rounded-lg"></div>
-                <div className="aspect-square bg-primary/5 rounded-lg"></div>
-                <div className="aspect-square bg-primary/10 rounded-lg"></div>
-                <div className="aspect-square bg-primary/70 rounded-lg"></div>
-                <div className="aspect-square bg-primary/10 rounded-lg"></div>
-                <div className="aspect-square bg-primary/5 rounded-lg"></div>
-                <div className="aspect-square bg-primary/10 rounded-lg"></div>
-                <div className="aspect-square bg-primary/5 rounded-lg"></div>
-                <div className="aspect-square bg-primary/95 rounded-lg"></div>
+            <ScrollReveal delay={0.35} className="col-span-12 md:col-span-6 lg:col-span-4">
+              <div className="bg-cream border border-sand rounded-[5px] p-8 h-full hover:border-warm-gray transition-colors">
+                <span className="material-symbols-outlined text-zap-orange mb-4 p-3 bg-light-sand rounded-[5px]" data-icon="grid_view">grid_view</span>
+                <h3 className="font-headline-md text-zap-black">Confusion Matrix</h3>
+                <p className="text-dark-charcoal/70 font-body-base mt-2 mb-6">Interactive heatmaps to visualize class-wise performance and overlap.</p>
+                <div className="grid grid-cols-4 gap-1 opacity-60">
+                  <div className="aspect-square bg-zap-orange/80 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/20 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/10 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/5 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/10 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/90 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/5 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/20 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/5 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/10 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/70 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/10 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/5 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/10 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/5 rounded-[3px]"></div>
+                  <div className="aspect-square bg-zap-orange/95 rounded-[3px]"></div>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            {/* Ready to Optimize CTA - Matching Image */}
-            <div className="col-span-12 lg:col-span-8 bg-[#0B1221] text-white rounded-3xl p-10 md:p-14 flex flex-row items-center justify-between overflow-hidden relative group border border-white/5 hover:border-white/10 transition-all duration-500">
-              <div className="relative z-10 flex-1">
-                <h3 className="font-['Manrope'] text-2xl md:text-3xl font-bold mb-3 tracking-tight leading-[1.1]">Ready to optimize?</h3>
-                <p className="text-slate-400 text-sm md:text-base mb-8 leading-relaxed">Start your first model inspection in minutes. No credit card required.</p>
-                <button className="bg-[#FF5722] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#E64A19] transition-all active:scale-95 shadow-2xl shadow-orange-500/20">Launch Inspector</button>
+            <ScrollReveal delay={0.2} className="col-span-12 lg:col-span-8">
+              <div className="bg-zap-black text-cream rounded-lg p-10 md:p-14 flex flex-col md:flex-row items-center justify-between overflow-hidden relative group border border-zap-black h-full">
+                <div className="relative z-10 flex-1">
+                  <h3 className="font-display-xl text-[2rem] md:text-[2.5rem] mb-3">Ready to optimize?</h3>
+                  <p className="text-warm-gray font-body-base mb-8 leading-relaxed">Start your first model inspection in minutes. No credit card required.</p>
+                  <button className="bg-zap-orange text-cream border border-zap-orange rounded-[4px] px-6 py-3 font-button hover:bg-zap-orange/90 active:scale-[0.98] transition-all">Launch Inspector</button>
+                </div>
+                <div className="hidden md:flex items-center justify-center flex-shrink-0 md:ml-8 opacity-10 group-hover:opacity-20 transition-all duration-700 pointer-events-none">
+                  <Rocket size={120} strokeWidth={1} className="text-sand rotate-[-15deg] group-hover:rotate-[-10deg] transition-all duration-700" />
+                </div>
               </div>
-              <div className="hidden md:flex items-center justify-center flex-shrink-0 ml-8 opacity-20 group-hover:opacity-30 transition-all duration-700 pointer-events-none">
-                <Rocket size={120} strokeWidth={1} className="text-slate-400 rotate-[-15deg] group-hover:rotate-[-10deg] transition-all duration-700" />
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
-        <section className="bg-surface-container-lowest py-24 px-6 border-y border-slate-100">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-headline-lg text-on-surface">How it works</h2>
-              <p className="text-secondary font-body-base">From raw model to production-ready insights.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-              <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-slate-200 -z-0"></div>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-white border-2 border-primary-container rounded-full flex items-center justify-center mb-6 shadow-xl shadow-primary/10">
-                  <span className="font-mono-data text-primary text-xl font-bold">01</span>
-                </div>
-                <h4 className="font-headline-md text-lg mb-3">Upload Model</h4>
-                <p className="text-secondary text-sm px-4">Securely upload your CNN weights (PyTorch, TensorFlow, or ONNX format).</p>
+        <section className="bg-light-sand py-24 px-6 border-y border-sand">
+          <div className="max-w-[1200px] mx-auto">
+            <ScrollReveal delay={0.1}>
+              <div className="text-center mb-16">
+                <span className="font-label-caps text-warm-gray tracking-[0.05em] mb-3 block">02 / Process</span>
+                <h2 className="font-heading text-zap-black mb-2">How it works</h2>
+                <p className="font-body-lg text-dark-charcoal">From raw model to production-ready insights.</p>
               </div>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-white border-2 border-primary-container rounded-full flex items-center justify-center mb-6 shadow-xl shadow-primary/10">
-                  <span className="font-mono-data text-primary text-xl font-bold">02</span>
-                </div>
-                <h4 className="font-headline-md text-lg mb-3">Upload Dataset</h4>
-                <p className="text-secondary text-sm px-4">Provide a validation set to baseline your performance across target classes.</p>
+            </ScrollReveal>
+
+            <ScrollReveal stagger staggerDelay={0.15} delay={0.2}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <div className="hidden md:block absolute top-12 left-0 w-full h-px bg-sand"></div>
+                {[
+                  { num: "01", title: "Upload Model", desc: "Securely upload your CNN weights (PyTorch, TensorFlow, or ONNX format)." },
+                  { num: "02", title: "Upload Dataset", desc: "Provide a validation set to baseline your performance across target classes." },
+                  { num: "03", title: "View Insights", desc: "Access deep-dive analysis dashboards and pinpoint structural weaknesses." },
+                ].map((step) => (
+                  <div key={step.num} className="relative z-10 flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-cream border border-sand rounded-full flex items-center justify-center mb-6">
+                      <span className="font-mono-data text-zap-orange text-xl font-semibold">{step.num}</span>
+                    </div>
+                    <h4 className="font-headline-md text-lg text-zap-black mb-3">{step.title}</h4>
+                    <p className="font-body-sm text-dark-charcoal/60 px-4">{step.desc}</p>
+                  </div>
+                ))}
               </div>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-white border-2 border-primary-container rounded-full flex items-center justify-center mb-6 shadow-xl shadow-primary/10">
-                  <span className="font-mono-data text-primary text-xl font-bold">03</span>
-                </div>
-                <h4 className="font-headline-md text-lg mb-3">View Insights</h4>
-                <p className="text-secondary text-sm px-4">Access deep-dive analysis dashboards and pinpoint structural weaknesses.</p>
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl" data-icon="shield">shield</span>
-              <span className="font-bold text-on-surface">SOC2 COMPLIANT</span>
+        <ScrollReveal delay={0.1} direction="none">
+          <section className="py-20 px-6 border-b border-sand">
+            <div className="max-w-[1200px] mx-auto flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-3xl text-dark-charcoal" data-icon="shield">shield</span>
+                <span className="font-button-sm text-zap-black tracking-[0.5px]">SOC2 COMPLIANT</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-3xl text-dark-charcoal" data-icon="speed">speed</span>
+                <span className="font-button-sm text-zap-black tracking-[0.5px]">1.2ms LATENCY</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-3xl text-dark-charcoal" data-icon="memory">memory</span>
+                <span className="font-button-sm text-zap-black tracking-[0.5px]">MULTI-GPU ACCEL</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl" data-icon="speed">speed</span>
-              <span className="font-bold text-on-surface">1.2ms LATENCY</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl" data-icon="memory">memory</span>
-              <span className="font-bold text-on-surface">MULTI-GPU ACCEL</span>
-            </div>
-          </div>
-        </section>
+          </section>
+        </ScrollReveal>
       </main>
 
-      <footer className="w-full py-8 mt-auto bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="font-['Manrope'] text-xs text-slate-500">© 2024 Glaux Intelligence Systems. All rights reserved.</span>
-          <div className="flex gap-6">
-            <a className="font-['Manrope'] text-xs text-slate-500 hover:text-slate-700 transition-colors" href="#">Privacy Policy</a>
-            <a className="font-['Manrope'] text-xs text-slate-500 hover:text-slate-700 transition-colors" href="#">Terms of Service</a>
-            <a className="font-['Manrope'] text-xs text-slate-500 hover:text-slate-700 transition-colors" href="#">Security</a>
-            <a className="font-['Manrope'] text-xs text-slate-500 hover:text-slate-700 transition-colors" href="#">Status</a>
+      <ScrollReveal delay={0.1} direction="up" distance={20}>
+        <footer className="w-full py-12 mt-auto bg-zap-black">
+          <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span className="font-body-sm text-sand">© 2024 Glaux Intelligence Systems. All rights reserved.</span>
+            <div className="flex gap-8">
+              <a className="font-body-sm text-warm-gray hover:text-cream transition-colors" href="#">Privacy Policy</a>
+              <a className="font-body-sm text-warm-gray hover:text-cream transition-colors" href="#">Terms of Service</a>
+              <a className="font-body-sm text-warm-gray hover:text-cream transition-colors" href="#">Security</a>
+              <a className="font-body-sm text-warm-gray hover:text-cream transition-colors" href="#">Status</a>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </ScrollReveal>
     </>
   );
 }
